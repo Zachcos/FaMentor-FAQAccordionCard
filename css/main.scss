@@ -31,3 +31,35 @@ html {
   justify-content: center;
   width: 100vw;
 }
+
+.card {
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  height: 510px;
+  width: 920px;
+  position: relative;
+}
+
+.illustration__box {
+  background: url("/images/illustration-box-desktop.svg") no-repeat;
+  height: 180px;
+  left: -92px;
+  position: absolute;
+  top: 200px;
+  width: 200px;
+}
+
+.illustration {
+  background: url("/images/illustration-woman-online-desktop.svg"),
+    url("/images/bg-pattern-desktop.svg");
+  background-size: 100%, 200%;
+  background-position: -80px 75px, 120% -275px;
+  background-repeat: no-repeat;
+  background-origin: top left, content-box;
+  width: 50%;
+}
+
+.acc {
+  width: 50%;
+}
