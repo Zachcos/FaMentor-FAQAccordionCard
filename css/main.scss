@@ -37,8 +37,11 @@ html {
   border-radius: 20px;
   display: flex;
   height: 510px;
-  width: 920px;
   position: relative;
+  width: 920px;
+  -webkit-box-shadow: 0px 41px 60px -20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 41px 60px -20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 41px 60px -20px rgba(0, 0, 0, 0.4);
 }
 
 .illustration__box {
@@ -53,13 +56,55 @@ html {
 .illustration {
   background: url("/images/illustration-woman-online-desktop.svg"),
     url("/images/bg-pattern-desktop.svg");
-  background-size: 100%, 200%;
+  background-origin: top left, content-box;
   background-position: -80px 75px, 120% -275px;
   background-repeat: no-repeat;
-  background-origin: top left, content-box;
+  background-size: 100%, 200%;
   width: 50%;
 }
 
 .acc {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 75px 0 30px;
   width: 50%;
+  &__title {
+    color: $text_prim__blue;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}
+
+.acc_item {
+  border-bottom: 1px solid $div__blue;
+  height: 50px;
+  overflow-y: hidden;
+  transition: all 0.3s ease-out;
+  &__title {
+    align-items: center;
+    color: $text_neut__darkBlue;
+    display: flex;
+    font-size: 1.175rem;
+    height: 50px;
+    .arrow {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+  }
+  &__body {
+    color: $text_neut__blue;
+    line-height: 1.4rem;
+  }
+
+  &.show {
+    height: 120px;
+
+    .acc_item__title {
+      font-weight: 700;
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

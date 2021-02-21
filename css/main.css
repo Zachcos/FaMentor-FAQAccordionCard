@@ -167,8 +167,10 @@ html {
   display: -ms-flexbox;
   display: flex;
   height: 510px;
-  width: 920px;
   position: relative;
+  width: 920px;
+  -webkit-box-shadow: 0px 41px 60px -20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 41px 60px -20px rgba(0, 0, 0, 0.4);
 }
 
 .illustration__box {
@@ -182,14 +184,72 @@ html {
 
 .illustration {
   background: url("/images/illustration-woman-online-desktop.svg"), url("/images/bg-pattern-desktop.svg");
-  background-size: 100%, 200%;
+  background-origin: top left, content-box;
   background-position: -80px 75px, 120% -275px;
   background-repeat: no-repeat;
-  background-origin: top left, content-box;
+  background-size: 100%, 200%;
   width: 50%;
 }
 
 .acc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 70px 75px 0 30px;
   width: 50%;
+}
+
+.acc__title {
+  color: #1d1e35;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.acc_item {
+  border-bottom: 1px solid #e7e7e9;
+  height: 50px;
+  overflow-y: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.acc_item__title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4a4b5e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.175rem;
+  height: 50px;
+}
+
+.acc_item__title .arrow {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.acc_item__body {
+  color: #787887;
+  line-height: 1.4rem;
+}
+
+.acc_item.show {
+  height: 120px;
+}
+
+.acc_item.show .acc_item__title {
+  font-weight: 700;
+}
+
+.acc_item.show .acc_item__title .arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=main.css.map */
